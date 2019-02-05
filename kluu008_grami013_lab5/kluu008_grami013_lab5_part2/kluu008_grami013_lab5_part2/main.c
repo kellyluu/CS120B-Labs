@@ -29,13 +29,13 @@ void tick(){
 			if (GetBit(~PINA,0) && !GetBit(~PINA,1))
 			{
 				state = buttonOne;
-				uctempC = uctempC < 9? uctempC+1:9;
-				PORTB = uctempC;
+				uctempB = uctempB < 9? uctempB+1:9;
+				PORTB = uctempB;
 			}else if (!GetBit(~PINA,0) && GetBit(~PINA,1))
 			{
 				state = buttonTwo;
-				uctempC = uctempC > 0? uctempC-1:0;
-				PORTB = uctempC;
+				uctempB = uctempB > 0? uctempB-1:0;
+				PORTB = uctempB;
 			}else if (GetBit(~PINA,0) && GetBit(~PINA,1))
 			{
 				state = bothButtons;
@@ -52,8 +52,8 @@ void tick(){
 			}else if (!GetBit(~PINA,0) && GetBit(~PINA,1))
 			{
 				state = buttonTwo;
-				uctempC = uctempC > 0? uctempC-1:0;
-				PORTB = uctempC;
+				uctempB = uctempB > 0? uctempB-1:0;
+				PORTB = uctempB;
 			}else if (GetBit(~PINA,0) && GetBit(~PINA,1))
 			{
 				state = bothButtons;
@@ -66,8 +66,8 @@ void tick(){
 			if (GetBit(~PINA,0) && !GetBit(~PINA,1))
 			{
 				state = buttonOne;
-				uctempC = uctempC < 9? uctempC+1:9;
-				PORTB = uctempC;
+				uctempB = uctempB < 9? uctempB+1:9;
+				PORTB = uctempB;
 			}else if (!GetBit(~PINA,0) && GetBit(~PINA,1))
 			{
 				state = buttonTwo;
